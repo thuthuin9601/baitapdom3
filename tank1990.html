@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="tank" src="tank.png" style="position: relative; top: 0px; left: 0px;" width="19" height="19">
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;"></div>
+    <table>
+        <tr>
+            <th></th>
+            <th><button onclick="moveup()">UP</button></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th><button onclick="moveleft()">LEFT</th>
+            <th><button onclick="movedown()">DOWN</th>
+            <th><button onclick="moveright()">RIGHT</th>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    let ox=0;
+    let oy=0
+    function moveup(){
+        oy-=19;
+        document.getElementById("tank").style["top"] = oy+ 19 + "px"
+    }
+    function movedown(){
+        oy+=19;
+        document.getElementById("tank").style["top"] = oy+ 19 + "px"
+    }
+    function moveleft(){
+        ox-=19;
+        document.getElementById("tank").style["left"] = ox + 38 + "px"
+    }
+    function moveright(){
+        ox+=19;
+        document.getElementById("tank").style["left"] = ox + 38 + "px"
+    }
+    
+</script>
